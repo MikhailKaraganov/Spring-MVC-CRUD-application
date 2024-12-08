@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"web.hustle.testing.onlinestoresbertask"},{"l":"web.hustle.testing.onlinestoresbertask.controller"},{"l":"web.hustle.testing.onlinestoresbertask.entity"},{"l":"web.hustle.testing.onlinestoresbertask.repository"},{"l":"web.hustle.testing.onlinestoresbertask.servcie"}];updateSearchResults();
