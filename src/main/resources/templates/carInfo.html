@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Car Details</title>
+</head>
+<body>
+
+<h1>Car Details</h1>
+
+<div>
+    <p><strong>Car Type:</strong> <span th:text="${carType}"></span></p>
+    <p><strong>Model:</strong> <span th:text="${car.model}"></span></p>
+    <p><strong>Brand:</strong> <span th:text="${car.brand}"></span></p>
+    <p><strong>Price ($):</strong> <span th:text="${car.price}"></span></p>
+    <p><strong>Year:</strong> <span th:text="${car.yearOfManufacture}"></span></p>
+    <p><strong>Color:</strong> <span th:text="${car.color}"></span></p>
+
+
+    <p th:if="${carType == 'PassengerCar'}">
+        <strong>Doors:</strong> <span th:text="${car.doors}"></span><br/>
+        <strong>Seating Capacity:</strong> <span th:text="${car.seatingCapacity}"></span>
+    </p>
+
+    <p th:if="${carType == 'Truck'}">
+        <strong>Payload Capacity:</strong> <span th:text="${car.payloadCapacity}"></span> tons<br/>
+        <strong>Cargo Type:</strong> <span th:text="${car.cargoType}"></span>
+    </p>
+
+    <p th:if="${carType == 'ElectricCar'}">
+        <strong>Battery Capacity:</strong> <span th:text="${car.batteryCapacity}"></span> kWh<br/>
+        <strong>Range per Charge:</strong> <span th:text="${car.rangePerCharge}"></span> km
+    </p>
+
+    <a href="/">Back to List</a>
+</div>
+
+</body>
+</html>

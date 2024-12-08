@@ -1,0 +1,79 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;  /* Основной шрифт */
+    background-color: #f4f4f9;      /* Легкий фон */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;  /* Для того, чтобы страница занимала всю высоту экрана */
+}
+
+h1 {
+    color: #333;  /* Темный цвет заголовка */
+    text-align: center;
+}
+
+form {
+    background-color: #ffffff;  /* Белый фон формы */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;  /* Ограничиваем ширину формы */
+    margin: 20px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;  /* Немного светлее, чем заголовок */
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;   /* Полная ширина */
+    padding: 10px;  /* Отступы внутри поля */
+    margin-bottom: 20px;  /* Отступ между полями */
+    border: 1px solid #ddd;  /* Легкая рамка */
+    border-radius: 4px;  /* Скругленные углы */
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #4CAF50;  /* Зеленая рамка при фокусе */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);  /* Легкое свечение */
+}
+
+button {
+    background-color: #4CAF50;  /* Зеленый фон */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;  /* Темнее зеленый при наведении */
+}
+
+/* Стили для ссылок */
+a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a:hover {
+    color: #45a049;
+}

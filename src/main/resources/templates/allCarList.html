@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <title>Cars List</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<h1>Cars Available for Sale</h1>
+<br>
+
+<table border="1">
+  <thead>
+  <tr>
+    <th>Model</th>
+    <th>Brand</th>
+    <th>Price ($)</th>
+    <th>Year</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="car : ${cars}">
+    <td th:text="${car.model}"></td>
+    <td th:text="${car.brand}"></td>
+    <td th:text="${car.price}"></td>
+    <td th:text="${car.yearOfManufacture}"></td>
+    <td>
+      <a th:href="@{/{id}(id=${car.id})}">View</a> |
+      <a th:href="@{/{id}/edit(id=${car.id})}">Edit</a> |
+      <a th:href="@{/{id}/delete(id=${car.id})}" onclick="return confirm('Are you sure you want to delete this car?')">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<br/>
+<!-- Ссылка на создание нового автомобиля -->
+<a th:href="@{/new?carType=PassengerCar}">Add New Passenger Car</a> -----
+<a th:href="@{/new?carType=Truck}">Add New Truck</a> -----
+<a th:href="@{/new?carType=ElectricCar}">Add New Electric Car</a>
+
+</body>
+</html>
